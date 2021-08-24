@@ -6,6 +6,7 @@ class Tree:
   def add(self, data):
     self.root.add_node(data)
 
+# implementation of a binary search tree
 class Node:
   def __init__(self, data):
     self.data = data
