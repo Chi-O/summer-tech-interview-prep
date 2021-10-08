@@ -146,13 +146,13 @@ if __name__ == "__main__":
 
   new_list.print_list()
 
-  print()
+  # print()
 
-  sllist = SLL()
+  # sllist = SLL()
 
-  print(new_list.remove(2))
-  print(new_list.remove(7))
-  print(new_list.remove(1))
-  print(new_list.remove(17))
-  print(sllist.remove(17))
-  new_list.print_list()
+  # print(new_list.remove(2))
+  # print(new_list.remove(7))
+  # print(new_list.remove(1))
+  # print(new_list.remove(17))
+  # print(sllist.remove(17))
+  # new_list.print_list()
