@@ -32,7 +32,7 @@ def reverse_message(msg):
             # next word starts after the space (if we're not at the end of the list yet)
             curr_start_index = i + 1
 
-msg = [ 'c', 'a', 'k', 'e', ' ', 'p', 'o', 'u', 'n', 'd', ' ', 's', 't', 'e', 'a', 'l' ]
+msg = list('cake pound steal')
 
 print(''.join(msg))
 
