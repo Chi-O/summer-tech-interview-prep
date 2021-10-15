@@ -47,7 +47,7 @@ def solution(A):
     # so the max, and all the buildings to the right have an ocean view
     return list(range(curr_max[1], len(A)))
 
-case1 = [4,2,3,1] # curr_max = (4, 0) -> wrong output of [0, 1, 2, 3]
+case1 = [4,2,3,1] # curr_max = (4, 0) -> wrong output of [0, 1, 2, 3], expected output 
 case2 = [4,3,2,1] # [0, 1, 2, 3]
 case3 = [1,3,2,4] # [3]
 case4 = [2,2,2,2] # [3
