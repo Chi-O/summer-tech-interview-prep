@@ -21,7 +21,7 @@ Write an efficient algorithm for the following assumptions:
 # you can write to stdout for debugging purposes, e.g.
 # print("this is a debug message")
 
-def solution(A): # scored 66%, 25% for performance
+def solution(A):
     # write your code in Python 3.6
     res = 1
 
@@ -29,15 +29,10 @@ def solution(A): # scored 66%, 25% for performance
         res += 1
 
     return res
-
 def solution_2(A):
-    arr = list(range(1,len(A)+1))
-
-    try:
-        result = set(arr).difference(set(A)).pop()
-    except:
-        result = max(A) + 1
-
+    z = list(range(1,len(A)+1))
+    result = set(z).difference(set(A))
+    
     return result
 
 case_1 = [1, 3, 6, 4, 1, 2]
@@ -45,5 +40,5 @@ case_2 = [1, 2, 3]
 case_3 = [-1, -3]
 
 print(solution_2(case_1))
-print(solution_2(case_2))
-print(solution_2(case_3))
+print(solution(case_2))
+print(solution(case_3))
