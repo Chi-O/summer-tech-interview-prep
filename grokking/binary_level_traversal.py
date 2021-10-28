@@ -15,6 +15,37 @@ def traverse(root):
 
     # TODO: Write your code here
 
+    # edge case for empty tree
+    if root is None:
+        return result
+
+    # first enqueue root
+    queue = deque()
+    queue.append(root)
+
+    # while the queue is not empty
+    while queue:
+        # get the level size
+        this_level = len(queue)
+        level = []
+
+        for _ in range(this_level):
+            # get the current node
+            this_node = queue.popleft()
+
+            # add the node to the current level
+            level.append(this_node.val) # we want just the value
+
+            # add the children to the queue
+            if this_node.left:
+                queue.append(this_node.left)
+            
+            if this_node.right:
+                queue.append(this_node.right)
+        
+        # update the result array
+        result.append(level)
+
     return result
 
 def main():
