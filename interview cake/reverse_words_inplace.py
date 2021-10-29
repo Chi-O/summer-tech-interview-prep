@@ -9,7 +9,7 @@ def reverse_inplace(msg, left_index, right_index):
         right_index -= 1
 
 def reverse_message(msg):
-    reverse_inplace(msg, 0, len(msg) - 1)
+    reverse_inplace(msg, 0, len(msg) - 1) # inititally reverse entire string
 
     # keep track of the start index of the current word
     curr_start_index = 0 
