@@ -16,7 +16,7 @@ def reverse_message(msg):
     
     # '+ 1" so that we know when we reach the end of the last word
     for i in range(len(msg) + 1):
-        # found the end of the current word
+        # found the end of the current word or end of string
         if i == len(msg) or msg[i] == ' ':
             # 'i - 1' is the char before the space
             # reverse that word
