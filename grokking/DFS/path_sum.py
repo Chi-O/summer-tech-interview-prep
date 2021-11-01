@@ -11,9 +11,19 @@ class TreeNode:
     self.right = right
 
 
-def has_path(root, sum): # returns True if path exsists, False otherwise
+def has_path(root, s): # returns True if path exsists, False otherwise
   # TODO: Write your code here
-  return False
+
+  if not root:
+    return False
+
+  # check if it is a leaf, and path exsists
+  if root.val == s and (root.left is None) and (root.right is None):
+    return True
+
+  # recursively call the function on its left and right nodes
+  # return true if either return true
+  return has_path(root.left, s - root.val) or has_path(root.right, s - root.val)
 
 def main():
 
@@ -25,6 +35,5 @@ def main():
   root.right.right = TreeNode(5)
   print("Tree has path: " + str(has_path(root, 23)))
   print("Tree has path: " + str(has_path(root, 16)))
-
 
 main()
