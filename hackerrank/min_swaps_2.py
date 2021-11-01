@@ -35,15 +35,9 @@ def min_swaps(arr):
             # need to update the index dict
             index_dict[correct_val] = index
             index_dict[val] = i_to_swap
+            
             count += 1
         
-        return count
-             
-
-
-
-
-    
     return count
 
 ex1 = [7, 1, 3, 2, 4, 5, 6]
