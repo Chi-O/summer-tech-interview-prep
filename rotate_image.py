@@ -1,14 +1,30 @@
+# NOTE: image is n x n
 def rotate_image(image):
-    res = [[0 for i in range(len(image))] for j in range(len(image))]
-    
-    for i in range(len(image)):
-        for j in range(len(image) - 1, -1, -1):
-            res[j][i] = image[i][j]
-            
-    print(res)
+    # transpose then reflect image
+    transpose(image)
+    reflect(image)
 
-a = [[1, 2, 3],
-     [4, 5, 6],
-     [7, 8, 9]]
+# flip on the diagonal
+def transpose(image):
+    n = len(image)
 
-rotate_image(a)
+    for i in range(n):
+        for j in range(i, n):
+            image[i][j], image[j][i] = image[j][i], image[i][j]
+
+
+# flip on mirror line
+def reflect(image):    
+    n = len(image)
+
+    for i in range(n):
+        for j in range(n // 2):
+            image[i][j], image[i][- j - 1] = image[i][- j - 1], image[i][j]
+
+image = [[1,2,3],
+         [4,5,6],
+         [7,8,9]]
+
+rotate_image(image)
+
+print(image)
