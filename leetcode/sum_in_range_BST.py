@@ -25,7 +25,7 @@ class Solution(object):
             elif root.val > high:
                 return self.rangeSumBST(root.left)
             else:
-                return root.val + self.rangeSumBST(root.left) + self.rangeSumBST(root.left)
+                return root.val + self.rangeSumBST(root.right) + self.rangeSumBST(root.left)
         else:
             return 0
         
