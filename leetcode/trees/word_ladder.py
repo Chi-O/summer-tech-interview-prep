@@ -30,7 +30,6 @@ def one_edit(w1, w2):
     if len(w1) != len(w2):
         return False
 
-    # flag = True
     diff = 0
 
     for i in range(len(w1)):
