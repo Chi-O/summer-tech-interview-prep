@@ -16,6 +16,10 @@ A leaf is a node with no children.
 #         self.left = left
 #         self.right = right
 
+"""
+Time: O(N^2) because we traverse each node in the tree O(N), and potentially have to save its current path O(N)
+Space: O(N) 
+"""
 class Solution(object):
     def pathSum(self, root, targetSum):
         """
