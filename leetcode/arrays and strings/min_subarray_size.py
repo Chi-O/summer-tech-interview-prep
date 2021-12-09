@@ -1,5 +1,5 @@
 class Solution:
-    def minSubArrayLen(self, target):
+    def minSubArrayLen(self, target, nums):
     
         """
         return the minimal length of contiguous subsrray which sum >= target
