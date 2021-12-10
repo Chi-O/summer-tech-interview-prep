@@ -45,3 +45,7 @@ class Solution:
         if res == float('inf'):
             return 0
         return res
+
+s = "message"
+
+print(len(s[0:2]))
