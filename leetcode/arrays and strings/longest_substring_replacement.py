@@ -5,11 +5,10 @@ def length_of_longest_substring(str1, k):
   # Try to extend the range [window_start, window_end]
   for window_end in range(len(str1)):
     right_char = str1[window_end]
-
+    
     if right_char not in frequency_map:
       frequency_map[right_char] = 0
     frequency_map[right_char] += 1
-    
     max_repeat_letter_count = max(max_repeat_letter_count, frequency_map[right_char])
 
     # Current window size is from window_start to window_end, overall we have a letter which is
@@ -32,4 +31,8 @@ def main():
   print(length_of_longest_substring("abccde", 1))
 
 
-main()
+# main()
+
+s = [5, 6, 7, 1, 2]
+
+print(s[-1])
