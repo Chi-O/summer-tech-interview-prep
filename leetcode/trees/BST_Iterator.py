@@ -12,6 +12,8 @@ the in-order traversal of a binary search tree (BST):
     the traversal to the right of the pointer, otherwise returns false.
 
     int next() Moves the pointer to the right, then returns the number at the pointer.
+
+    []
 """
 
 # Definition for a binary tree node.

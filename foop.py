@@ -1,9 +1,18 @@
-msg = "this is a sentence"
+msg = "eeccccbebaeeabebcccee"
 
-store = {}
+def isPalindrome(s):
+    s = list(filter(str.isalnum, s.lower()))
+    
+    l = 0
+    r = len(s) - 1
+    
+    while l < r:
+        if s[l] == s[r]:
+            l += 1
+            r -= 1
+        else:
+            return False
+        
+    return True
 
-for c in msg:
-    if c.isalpha():
-        store[c] = ord(c) - ord('a') + 1
-
-print(store)
+print(isPalindrome(msg))
